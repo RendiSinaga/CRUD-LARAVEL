@@ -21,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('/student', [StudentController::class, 'index'])
     ->name('student.index');
+
+route::get('/student/add', [StudentController::class, 'create'])
+    ->name('student.create');

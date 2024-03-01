@@ -10,6 +10,9 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+
+
     public function index()
     {
         // Memanggil seluruh data dari table Student
@@ -22,7 +25,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('student.create');
     }
 
     /**
