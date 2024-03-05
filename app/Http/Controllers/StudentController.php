@@ -33,7 +33,37 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+
+            'nim' => 'required|unique:students,nim',
+            'nama' => 'required',
+            'email' => 'required|email',
+            'prodi' => 'required'
+        ], [
+            'nim.required' => 'NIM harus diisi.',
+            'nim.unique' => 'NIM sudah digunakan.',
+            'nama.required' => 'Nama harus diisi.',
+            'email.required' => 'Email harus diisi.',
+            'email.email' => 'Format email tidak valid.',
+            'prodi.required' => 'Program studi harus diisi.'
+        ]);
+
+        $students = new Student();
+        $students->nim = $validatedData['nim'];
+        $students->nama = $validatedData['nama'];
+        $students->email = $validatedData['email'];
+        $students->prodi = $validatedData['prodi'];
+        if ($students->save()) {
+            return redirect('/student')->with([
+                'notifikasi' => 'Data Berhasil disimpan !',
+                'type' => 'success'
+            ]);
+        } else {
+            return redirect('')->back()->with([
+                'notifikasi' => 'Data Gagal disimpan !',
+                'type' => 'danger'
+            ]);
+        }
     }
 
     /**
@@ -41,8 +71,8 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-        //
-    }
+    
+}
 
     /**
      * Show the form for editing the specified resource.
