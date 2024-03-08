@@ -27,14 +27,17 @@ Route::get('/farrel', function () {
 Route::get('/student', [StudentController::class, 'index'])
     ->name('student.index');
 
-route::get('/student/add', [StudentController::class, 'create'])
+Route::get('/student/add', [StudentController::class, 'create'])
     ->name('student.create');
 
 Route::post('/student/add', [StudentController::class, 'store'])
     ->name('student.store');
 
-route::get('/student/edit/{id}', [StudentController::class, 'edit'])
+Route::get('/student/edit/{id}', [StudentController::class, 'edit'])
     ->name('student.edit');
 
 Route::put('/student/edit/{id}', [StudentController::class, 'update'])
     ->name('student.update');
+
+Route:: get('/student/destroy/{id', [StudentController::class, 'destroy'])
+    ->name('student.destroy');
