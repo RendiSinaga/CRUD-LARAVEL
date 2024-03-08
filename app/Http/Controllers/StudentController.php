@@ -144,6 +144,9 @@ return view('student.edit', ['student' => $student->first()]);
      *
     
      */
+
+
+    // fitur delete 
     public function destroy(string $id)
     {
         $student = Student::where('nim', $id);
