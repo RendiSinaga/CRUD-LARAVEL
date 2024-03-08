@@ -27,3 +27,6 @@ route::get('/student/add', [StudentController::class, 'create'])
 
 Route::post('/student/add', [StudentController::class, 'store'])
     ->name('student.store');
+
+route::get('/student/edit/{id}', [StudentController::class, 'edit'])
+    ->name('student.edit');
