@@ -64,6 +64,8 @@ initial-scale=1, shrink-to-fit=no">
                                 <option>Teknik Informatika</option>
                                 <option>Rekayasa Keamanan Siber</option>
                                 <option>Teknologi Rekayasa Perangkat Lunak</option>
+                                <option>Teknologi Rekayasa Multimedia</option>
+                                <option>Animasi</option>
                             </select>
 
                             @error('prodi')
