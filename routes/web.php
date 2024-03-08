@@ -39,5 +39,5 @@ Route::get('/student/edit/{id}', [StudentController::class, 'edit'])
 Route::put('/student/edit/{id}', [StudentController::class, 'update'])
     ->name('student.update');
 
-Route:: get('/student/destroy/{id}', [StudentController::class, 'destroy'])
+Route::delete('/student/destroy/{id}', [StudentController::class, 'destroy'])
     ->name('student.destroy');
