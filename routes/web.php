@@ -35,3 +35,6 @@ Route::post('/student/add', [StudentController::class, 'store'])
 
 route::get('/student/edit/{id}', [StudentController::class, 'edit'])
     ->name('student.edit');
+
+Route::put('/student/edit/{id}', [StudentController::class, 'update'])
+    ->name('student.update');
