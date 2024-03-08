@@ -142,7 +142,7 @@ class StudentController extends Controller
         
         if ($student->firts()->delete()) {
 
-            return redirect('/students')->with([
+            return redirect('/student')->with([
                 'notifikasi' => 'Data Berhasil Dihapus !',
                 'type' => 'succes'
             ]);
