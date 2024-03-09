@@ -43,11 +43,11 @@ fit=no">
                                     <td>{{ $data->prodi }}</td>
                                     <td>
                                         <a href="/student/edit/{{ $data->nim }}" class="btn btn-sm  
-                                        btn-warning mr-1"> <i class="fas fa-edit mr-2"></i> Edit</a>
+                                        btn-warning mr-1"> <i class="fas fa-edit mr-2"></i>Edit</a>
                                         <form method="POST" action="/student/delete/{{  $data->nim }}">
                                             @csrf @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas  
-        fa-trash-alt mr-2"></i> Hapus</button>
+                                            <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash-alt mr-2">
+                                            </i> Hapus</button>
                                         </form>
                                     </td>
                                 </tr>

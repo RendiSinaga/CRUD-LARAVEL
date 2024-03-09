@@ -130,7 +130,7 @@ return view('student.edit', ['student' => $student->first()]);
             ]);
         } else {
             return redirect()->back()->with([
-                'notifikasi' => 'Data gagal diedit !',
+                'notifikasi' => 'Data telah gagal diedit !',
                 'type' => 'error'
             ]);
         }

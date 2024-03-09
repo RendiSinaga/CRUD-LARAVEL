@@ -16,7 +16,7 @@ initial-scale=1, shrink-to-fit=no">
     <div class="container">
         <div class="container-fluid mt-4">
             <div class="card">
-                <div class="card-header">Tambah Siswa Siswa
+                <div class="card-header">Tambah data Siswa
                     <a href="{{ route('student.index') }}" type="button" style="float:right" class="btn btn-danger"><i class="fas fa-arrow-left mr-2"> </i> Kembali</a>
                 </div>
 
@@ -40,7 +40,7 @@ initial-scale=1, shrink-to-fit=no">
                         </div>
 
                         <div class="form-group mb-2">
-                            <label for="nama">Nama <b class="text-danger">*</b></label>
+                            <label for="nama">Nama<b class="text-danger">*</b></label>
                             <input required placeholder="Masukkan Nama" type="text" id="nama" name="nama" class="form-control @error('nama') is-invalid @enderror" value="{{ old('nama') }}">
                             @error('nama')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -48,7 +48,7 @@ initial-scale=1, shrink-to-fit=no">
                         </div>
 
                         <div class="form-group mb-2">
-                            <label for="nama">E-Mail <b class="text-danger">*</b></label>
+                            <label for="nama">EMail <b class="text-danger">*</b></label>
                             <input required placeholder="Masukkan E-Mail" type="email" id="email" name="email" class="form-control  
     @error('email') is-invalid @enderror" value="{{ old('email') }}">
                             @error('email')
