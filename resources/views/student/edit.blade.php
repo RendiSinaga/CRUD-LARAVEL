@@ -51,7 +51,7 @@ shrink-to-fit=no">
                         </div>
 
                         <div class="form-group mb-2">
-                            <label for="nama">E-Mail <b class="text-danger">*</b></label>
+                            <label for="nama">EMail <b class="text-danger">*</b></label>
                             <input required placeholder="Masukkan E-Mail" type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email', $student->email) }}">
                             @error('email')
                             <div class="invalid-feedback">{{ $message }}</div> @enderror
@@ -69,6 +69,12 @@ shrink-to-fit=no">
                                 <option @if ( old('prodi', $student->prodi ) ==
                                     'Teknologi Rekayasa Perangkat Lunak' ) {{ 'selected' }} @endif>
                                     Teknologi Rekayasa Perangkat Lunak</option>
+                                <option @if ( old('prodi', $student->prodi ) ==
+                                    'Teknologi Rekayasa Multimedia' ) {{ 'selected' }} @endif>
+                                    Teknologi Rekayasa Multimedia</option>
+                                <option @if ( old('prodi', $student->prodi ) ==
+                                    'Animasi' ) {{ 'selected' }} @endif>
+                                    Animasi</option>
                             </select>
                             @error('prodi')
                             <div class="invalid-feedback">{{ $message }}</div>
